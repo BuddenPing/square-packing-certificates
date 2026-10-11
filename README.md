@@ -32,4 +32,4 @@ The direct JSON file has two source-path metadata strings made relative for port
 
 Two differently placed source patches retain 60 and 69 whole unit squares; 7×6 and 6×6 grids add 42 and 36. Total: 207. A final factor 10000000001/10000000000 expands centres and container only, leaving small-square sides exactly one. The reported bound includes this guard. No claim is made to invent the N70 packing or patch composition in general.
 
-Verification, comparison review and package preparation were assisted by OpenAI Codex. The package does not claim external maintainer acceptance or independent human review. Included upstream material retains its attribution and accompanying licence terms; this repository adds no new licence grant for third-party material.
+The package does not claim external maintainer acceptance or independent human review. Included upstream material retains its attribution and accompanying licence terms; this repository adds no new licence grant for third-party material.
