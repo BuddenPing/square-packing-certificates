@@ -1,0 +1,57 @@
+{
+  "checked_at_utc": "2026-10-12T22:52:36.412526+00:00",
+  "input": "construction/n272.cert",
+  "input_sha256": "b65b68e4633d78f82e1e8b3ad5b1526ec85b70f0a5bb36e515d0bab6f4ffe88f",
+  "n": 272,
+  "side_exact": "1696558647483767063575600703342204556962987576825904423514291493830293022275118026464939778830359993334240647227/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "exact_sat": {
+    "valid": true,
+    "n": 272,
+    "pairs_checked": 36856,
+    "pairs_by_exact_axis_bbox": 36641,
+    "side_decimal": 16.96558647483767,
+    "seconds": 0.18144483299693093
+  },
+  "exact_polygon": {
+    "valid": true,
+    "n": 272,
+    "pairs_checked": 36856,
+    "pairs_exact_polygon_clipped": 215,
+    "nonpositive_intersection_areas": 215
+  },
+  "negative_controls": {
+    "outside": {
+      "sat_rejected": true,
+      "polygon_rejected": true
+    },
+    "duplicate": {
+      "sat_rejected": true,
+      "polygon_rejected": true
+    }
+  },
+  "source_design_comparison": {},
+  "normalized_certificate": "n272.cert.json",
+  "normalized_sha256": "1bfe74e4af5dba4bfb6865ad953ff169620c2b85d91f919abd0ef5527cae21e0",
+  "frontier_reconciliation": {
+    "all_public_certificate_variants_beaten": 2,
+    "additional_unfiled_public_source_beaten": "https://raw.githubusercontent.com/itsnaka/squish-certs/56fa71f949234b63534772b3f3b4f1320fbf2afd/squish-submission-2026-10-11/sources/squish-s272-source.cert.json",
+    "source_certificate_exact": "1114257766245565718930315998681473968716597475579279287292886911189991499936935381/65677527145799837468063782221943718992249135546143429464936478230690701220023471",
+    "gain_exact": "3455163012815282216022583747121193560187794655796010274147311052640567802437134671899936655728106662973009088947470180139001126514717941775694938401978725369573173520828935083/6567752714579983746806378222194371899224913554614342946493647823069070122002347100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "public_comparison_file": "public-comparison.json",
+    "auxiliary_source_file": "n272-auxiliary-source-comparison.json",
+    "retained_check_file": "Retained inventory audit performed locally; no smaller retained witness found.",
+    "all_frozen_variables_are_translations": true,
+    "frozen_count": 22,
+    "equation_count": 1564,
+    "same_ordered_equations_as100digits": true,
+    "same_frozen_variable_set_as100digits": true,
+    "gain_decimal": "5.260799489519520293116995727955647936539570850616970697772488197492357805820930735305635908456405373306675310286996301712860316392150037500231202703646709151650E-16",
+    "side_upward_40_places": "16.9655864748376706357560070334220455696299"
+  },
+  "source_nominal_comparison": {
+    "source_url": "https://github.com/itsnaka/squish-certs/blob/56fa71f949234b63534772b3f3b4f1320fbf2afd/squish-submission-2026-10-11/README.md",
+    "source_claim": "60-digit contact solution; clearance 1e-32; certified S within about 1e-30 of bottom of arrangement.",
+    "comparison": "Candidate improvement is over 5.26e-16, fourteen orders of magnitude above the source-described nominal gap.",
+    "limitation": "Source uses an approximate bound and does not publish an exact guard formula. This is provenance evidence, not a formal interval enclosure of the unknown source nominal side."
+  }
+}
