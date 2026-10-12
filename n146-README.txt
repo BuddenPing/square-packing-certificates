@@ -1,55 +1,42 @@
-N146 — exact rational square-packing submission
+N146 — update to the existing exact square-packing submission
 
-Original layout: Ryan Xu.
-Preceding refinement and source certificate: Robert Barnett.
-Earlier comparison: Evan Daniel regularization.
-Exact certificate refinement and submission: PingYou Ltd.
+New certified upper bound (rounded upward): 12.5837822039508342919134679370511513667729
+Previous submitted bound: 12.58378220395096600473550813141036063202933591115003177771784379017885104413666461645116413867382945
+Exact improvement: 1.317128220401943592092652564497380822204946789899394176764996311828456462620366738294461851416156994E-13
+The exact rational side and complete 146-owner witness are in n146.cert.json.
+This is a further verified upper-bound refinement, not a new count or an
+optimality claim. See COMPARISON.json for exact fractions and source hashes.
 
-New certified side, rounded upward: 12.583782203950967
-Exact side (authoritative):
-212706675227397903760245606872157807798841438063936454387903056635727898003963615684805096386145327886107738242216669359151930723994424404457105225445545795135/16903238770344720525176157542964020457292350107469085192369697156572885656221218224421809664610386039754206736232577088653206716252450318087651395365606969879
+Credit: PingYou Ltd — new refinement.
+Ryan Xu — original layout. Robert Barnett — preceding refinement and source
+certificate. Evan Daniel — contact solver/source custody and earlier N146
+regularization. The full prior construction lineage is retained.
 
-Previous side: 12.58378220395104620345700087404080187257267785933190855204207996206332953979734071875067754299373096
-New side:      12.58378220395096600473550813141036063202933591115003177771784379017885104413666461645116413867382945
-Decrease:     8.019872149274263044124054334194818187677432423617188447849566067610229951340431990151736169406868849E-14
+After extracting the ZIP, enter its n146 directory and run:
+  python3 VERIFY.py
+Use Python 3.10+ without -O. No third-party packages or network are needed.
+This checks the full 146-square geometry with exact separating axes and an
+independent rational polygon algorithm, all 10,585 pairs, the prior witness,
+strict improvement, hashes, negative controls, native conversion identity,
+and binding of the saved native reports. It also checks the inherited
+physical inventory and every recorded equation subset. The coupled metric
+solve is documented by its saved states and independent audit; the portable
+verifier does not rerun the transcendental numerical solver.
 
-The complete witness improves the prior published exact upper bound.
-It preserves the unit squares and all orientations; only their centers
-and enclosure change. See METHOD.txt and PROVENANCE.json for the exact
-construction and source lineage. public-frontier.json records the fresh comparison audit.
-This is an upper-bound claim, not a
-proof of optimality.
-
-Verification (run from this extracted package directory)
-
-  python3 -B VERIFY.py
-  python3 -B verify_geometry.py n146.cert.json
-
-This standalone Python 3.10+ verifier requires no external packages or
-network. It checks the certificate hashes, reconstructs the exact center
-map and enclosure, checks all 146 unit squares, all 584 walls and all
-10585 pairs, verifies strict improvement and native conversion.
-
-  python3 -B native/convert_witness.py n146.cert.json pingyou-n146-rational.yaml --check
+Optional fresh native replay:
   python3 -B native/replay_upstream.py --witness pingyou-n146-rational.yaml
+This requires Python 3.14 with mpmath 1.4.1, PyYAML 6.0.3, jsonschema 4.26.0 and
+strif 3.1.0 plus their dependencies. Both unchanged Squares Project verifiers
+are pinned at 074ac28d4ceb9a1897303f936d794771cfc6a7bd; sources/licenses are
+included. The supplied native report was freshly run on this exact YAML.
 
-The native replay requires Python 3.14 and mpmath 1.4.1, PyYAML 6.0.3,
-jsonschema 4.26.0 and strif 3.1.0, with their dependencies. It checks the
-included upstream source hashes, then runs both unchanged Squares Project
-verifiers pinned at 074ac28d4ceb9a1897303f936d794771cfc6a7bd. The two
-verifiers allow exact boundary contact and test every square pair.
+Native conversion identity alone:
+  python3 -B native/convert_witness.py n146.cert.json pingyou-n146-rational.yaml --check
 
-The .yaml file uses JSON syntax, valid YAML 1.2. The exact centers use
-[x, y, t], where t = tan(theta/2). All number strings are exact rationals.
-SHA256SUMS binds every package file except itself.
-
-Sources and credit
-
-Prior published certificate:
-https://github.com/RobertBarnettProjects/square-packing-research/blob/52cf1cc7ba006731ef76818267216c87bb63281e/certificates/n146.cert
-Prior registration: https://github.com/jlevy/squares/issues/505
-
-Upstream verification software and schema:
-Joshua Levy, the squares project (https://github.com/jlevy/squares).
-See native/UPSTREAM-LICENSE.txt for the unchanged license notice.
-No new license is asserted for third-party construction data.
+METHOD.txt describes the declared 663-incidence coupled realization and its
+limits. construction/inherited/ contains source states and diagnostics;
+only root n146.cert.json is the current submission. The authoritative
+certificate bytes are unchanged from the banked witness; historic internal
+paths in archival metadata are provenance only. New package instructions
+and comparisons use local relative paths. SHA256SUMS covers every package
+file except itself. No new license is asserted for third-party source data.
