@@ -1,5 +1,36 @@
 # Square-packing certificates — PingYou Ltd
 
+## 302 unit squares
+
+A complete exact rational construction with enclosing side
+
+```
+22337844230223278442299999/1250000000000000000000000
+= 17.8702753841786227538399992
+```
+
+Thus **s(302) ≤ 17.870275384179**, rounded upward. This is a feasible upper bound; no local or global optimality is claimed.
+
+The strongest prior public exact certificate located on 12 October 2026 is [Evan Daniel's regularization of Nate Chaoweeraprasit's SQUISH packing (T-146)](https://github.com/jlevy/squares/blob/562fdbdff1d98948f68b36b81b53f9c8165ffd08/packing/frontier/n-302.md), at 17.872029849081179973812429831968. The new side is smaller by **0.001754464902557219972430631968**, approximately **0.0098168%**. The comparison includes pending public reports and larger-count deletion bounds.
+
+### Files and checking
+
+- `n302-squares-project.zip`: complete evidence, construction and native-format package. Extract, enter `n302-squares-project`, and run `python3 VERIFY.py` (Python 3.10+ standard library; run without `-O`).
+- `n302.cert.json`: portable exact rational centres and half-angle parameters. Geometry is unchanged from the independently checked witness; internal nongeometric metadata was omitted.
+- `pingyou-n302-rational.yaml`: identical exact geometry in Squares Project Witness/v2 form.
+- `n302-verified-comparison.pdf` and `n302.svg`: comparison figure and packing diagram.
+- `n302-SHA256SUMS`: hashes of the five artifacts above.
+
+All **302 unit squares, 1,208 wall conditions and 45,451 pairs** pass. Three exact geometry checks accept the witness, and two unchanged native Squares Project verifiers pass at revision `074ac28d4ceb9a1897303f936d794771cfc6a7bd`. The package includes exact reconstruction of the physical-owner decoder, derived cubic frame, explicit rational centre table and recomputed finite guard. Replay does not repeat the exploratory owner selection or floating linear solve. These are implementation-level checks, not independent human audits or a proof of optimality.
+
+### Construction and credit
+
+**PingYou Ltd**: new N302 construction. **Ryan Xu**: underlying N70 construction, [#432](https://github.com/jlevy/squares/issues/432). **Evan Daniel**: [retained exact N70 source](https://github.com/evand/square-packing/blob/7dfca4e474e5822479f3da3fadf537fb2dbd0efc/search/regularize/lists/certs/n-070.cert.gz) and prior N302 regularization. **Nate Chaoweeraprasit (SQUISH)**: prior N302 construction, [#481](https://github.com/jlevy/squares/issues/481). Upstream software and schema credit remains with their authors; licenses are included.
+
+Four source patches contribute 16, 9, 9 and 16 whole squares; two upright banks contribute 105 and 147, totalling 302. A positive middle-seam return crosses a retained short return at a root of `2t^3-3t^2-2t+1=0`, prescribing two coherent tilted frames. The full finite realization has 254 upright squares and 24 squares in each mirrored tilt. Its exact guard is included in the bound. The construction note distinguishes this rational witness from the ideal algebraic limit.
+
+No claim is made to invent N70 or patch composition in general. Submission does not imply external maintainer acceptance.
+
 ## 153 unit squares
 
 A complete exact rational construction with enclosing side
