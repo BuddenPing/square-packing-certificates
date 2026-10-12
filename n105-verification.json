@@ -1,0 +1,193 @@
+{
+  "checked_at_utc": "2026-10-12T22:51:29.850051+00:00",
+  "input": "evidence/source160.cert",
+  "input_sha256": "ac0902a2df75e1cefeeab028120af1c1eaf557902a9e49ec406dae7229d57f22",
+  "n": 105,
+  "side_exact": "10789303783748158830926836660039617659736218711424421332884365754662904597598593330008796151/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "exact_sat": {
+    "valid": true,
+    "n": 105,
+    "pairs_checked": 5460,
+    "pairs_by_exact_axis_bbox": 5353,
+    "side_decimal": 10.789303783748158,
+    "seconds": 0.04671637499995995
+  },
+  "exact_polygon": {
+    "valid": true,
+    "n": 105,
+    "pairs_checked": 5460,
+    "pairs_exact_polygon_clipped": 107,
+    "nonpositive_intersection_areas": 107
+  },
+  "negative_controls": {
+    "outside": {
+      "sat_rejected": true,
+      "polygon_rejected": true
+    },
+    "duplicate": {
+      "sat_rejected": true,
+      "polygon_rejected": true
+    }
+  },
+  "source_design_comparison": {
+    "source_design_strict_lower": "16858287162106498173491765153/1562500000000000000015625000",
+    "source_design_upper": "10789303783748158831034729697921/1000000000000000000010000000000",
+    "below_source_design_strict_lower": true,
+    "lower_minus_candidate_exact": "4290075195451292197518249051827205822285118907256301244457480302401406669991203849/100000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "lower_minus_candidate_decimal": "4.290075195451292197475348299872692900310365424257574315454376648158830926836660082518411690731633399E-29"
+  },
+  "normalized_certificate": "n105.cert.json",
+  "normalized_sha256": "8c684d15e87e772bec491f0c77db5b87c0246883875f5c0ad8b0c8a8ac8cd613",
+  "frontier_reconciliation": {
+    "all_public_certificate_variants_beaten": 2,
+    "public_comparison_file": "exact-public-bound-table.json",
+    "public_comparison_sha256": "2fa6bb2bd8b5bbcbc257cca000ee081b30968f71643e0eac9f05e4a8fb62ae1e",
+    "current_source_HEADs_file": "live-heads.json",
+    "retained_check_file": "retained-bound-check.json",
+    "new_certificate_strictly_below_original_audit_candidate": true,
+    "scope": "Current fetched public certificates plus retained inventory; source-design check separately below."
+  },
+  "inherited_contact_control": {
+    "same_ordered_contact_equations_as_undilated_source_control": true,
+    "equation_count": 435,
+    "same_frozen_variable_set": true,
+    "frozen_variable_count": 32,
+    "frozen_coordinates": [
+      {
+        "square_zero_based": 5,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 58,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 82,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 99,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 35,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 31,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 32,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 100,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 18,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 91,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 77,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 20,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 40,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 33,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 93,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 29,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 1,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 0,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 19,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 62,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 30,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 85,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 66,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 51,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 46,
+        "coordinate": "x"
+      },
+      {
+        "square_zero_based": 68,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 57,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 47,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 71,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 83,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 64,
+        "coordinate": "y"
+      },
+      {
+        "square_zero_based": 34,
+        "coordinate": "x"
+      }
+    ],
+    "all_frozen_variables_are_translations": true,
+    "frozen_angle_variables": 0,
+    "undilated_control_side": "539465189187407941546341833004157538113553755276413847127689195106053490422353710763/50000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "undilated_control_inside_old_source_design_bracket": true,
+    "gap_below_undilated_control_decimal": "4.3533102534856394103855609669418147458165210848480885251203849E-29",
+    "certificate_side_upward_40_places": "10.7893037837481588309268366600396176597363",
+    "scope": "Verifies inherited system and source comparison. Does not establish local/global optimality."
+  }
+}
