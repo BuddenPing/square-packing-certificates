@@ -35,37 +35,36 @@ No claim is made to invent N70 or patch composition in general. Submission does 
 
 ## 153 unit squares
 
-A complete exact rational construction with enclosing side
+A refined exact rational certificate for the existing PingYou Ltd construction:
 
 ```
-6435006925203522001385040447/500000000000000000000000000
-= 12.870013850407044002770080894
+3217503462601758500692520223/250000000000000000000000000
+= 12.870013850407034002770080892
 ```
 
-Thus **s(153) ≤ 12.870013850408**, rounded upward. This is a feasible upper bound; no local or global optimality is claimed.
+Thus **s(153) ≤ 12.870013850408**, rounded upward. This is a feasible upper bound, with no claim of local or global optimality.
 
-The strongest prior exact certificate located on 11 October 2026 is [Evan Daniel's regularization of Nate Chaoweeraprasit's SQUISH packing](https://github.com/evand/square-packing/blob/7dfca4e474e5822479f3da3fadf537fb2dbd0efc/search/regularize/lists/certs/n-153.cert.gz), registered as [T-146](https://github.com/jlevy/squares/blob/5b0eb012e09b48b5044aacb439b4cfacf38935f5/packing/frontier/results.yaml#L15630), at exact side 12.872029849081179973762429831968. The new side is smaller by 0.002015998674135970992348937968 (approximately 0.015662%).
+The original submission was accepted as [T-148](https://github.com/jlevy/squares/blob/074ac28d4ceb9a1897303f936d794771cfc6a7bd/packing/frontier/n-153.md), at `12.870013850407044002770080894`. This certificate reduces that exact side by **1.0000000000002E-14**. The refinement is tracked in the existing [issue #504](https://github.com/jlevy/squares/issues/504); acceptance of the original does not imply acceptance of the refinement.
 
-### Files and reproduction
+The existing A=C return, rational orientations and guard `5000000000001/5000000000000` are unchanged. The finite centre/side realization is tighter; some free centres move substantially. The twelve-decimal reporting bound is unchanged.
 
-- `n153-squares-project.zip`: complete evidence and native-format package. Extract it, enter `n153-squares-project`, and run `python3 VERIFY.py` (Python 3.10+ standard library; do not use `-O`).
-- `n153.cert.json`: the original exact rational centres and half-angle parameters, unchanged byte-for-byte.
-- `pingyou-n153-rational.yaml`: identical exact geometry in Squares Project Witness/v2 form (JSON syntax valid as YAML).
-- `n153-verified-comparison.pdf`: two-page comparison and construction explanation.
-- `n153.svg`: illustration from the exact witness.
-- `n153-SHA256SUMS`: hashes of the five N153 artifacts above. `SHA256SUMS` covers the current repository files.
+### Files and verification
 
-The ZIP contains the explicit rational construction table, N70 source, intermediate N153 control, both prior N153 comparison certificates, symbolic return derivation, three exact geometry checks, native conversion and two successful Squares Project verifier receipts. All 153 unit squares, all 11,628 unordered pairs and every wall pass the exact checks. Replay reconstructs the table and guard; it does not repeat exploratory owner selection or a floating-point solve.
+- `n153-squares-project.zip`: complete portable evidence and replay package. Extract, enter `n153-squares-project`, and run `python3 VERIFY.py` (Python 3.10+ standard library; run without `-O`).
+- `n153.cert.json`: exact rational centre/half-angle triples. Internal nongeometric metadata is omitted; every coordinate string, ordering, count and side matches the reviewed witness.
+- `pingyou-n153-rational.yaml`: identical geometry in Squares Project Witness/v2 form.
+- `n153-verified-comparison.pdf` and `n153.svg`: refreshed comparison and diagram.
+- `n153-SHA256SUMS`: checksums of the five artifacts above.
 
-The PDF retains its pre-submission status caption. Historical source-path labels in the JSON are mapped to the included witnesses in `evidence/PROVENANCE.txt`; they are not runtime dependencies. The certificate and PDF are the original reviewed bytes.
+All **153 unit squares, 612 wall conditions and 11,628 unordered pairs** pass three exact geometry implementations. The package verifies its hashes, recorded rational construction replay, lossless native conversion and deliberate invalid-input controls. Both unchanged Squares Project verifiers at `074ac28d4ceb9a1897303f936d794771cfc6a7bd` also pass; receipts, source, licenses and optional native replay instructions are included. These are implementation-level checks, not independent human audits.
+
+The replay begins with the explicit rational realization table and documented owner lineage. It does not rerun exploratory selection or a floating-point solve. The finite guard is included; the unguarded design value is not substituted for the certified bound.
 
 ### Construction and credit
 
-**PingYou Ltd**: new N153 construction. **Ryan Xu**: underlying N70 construction, announced in [#432](https://github.com/jlevy/squares/issues/432). **Evan Daniel**: [exact N70 source retention](https://github.com/evand/square-packing/blob/7dfca4e474e5822479f3da3fadf537fb2dbd0efc/search/regularize/lists/certs/n-070.cert.gz) and refined prior N153 certificate. **Nate Chaoweeraprasit (SQUISH)**: prior N153 construction, [#481](https://github.com/jlevy/squares/issues/481).
+**PingYou Ltd**: construction and refinement. **Ryan Xu**: underlying N70 construction, [#432](https://github.com/jlevy/squares/issues/432). **Evan Daniel**: [retained exact N70 source](https://github.com/evand/square-packing/blob/7dfca4e474e5822479f3da3fadf537fb2dbd0efc/search/regularize/lists/certs/n-070.cert.gz) and exact checking tools. **Nate Chaoweeraprasit (SQUISH)**: earlier N153 comparator, [#481](https://github.com/jlevy/squares/issues/481). Additional upstream software and schema credits and licenses are retained.
 
-The new construction changes the surviving contact pattern of the boundary-patch approach used for [N207](https://github.com/jlevy/squares/issues/503), then recloses that pattern at a different angle. It contains 121 upright squares and tilted populations of 17 and 15. A final factor 5000000000001/5000000000000 expands centres and container only, leaving the small-square sides exactly one. The reported bound includes this guard.
-
-No claim is made to invent N70 or patch composition in general. The package does not claim independent human review or external maintainer acceptance. Included upstream material retains its attribution and accompanying licence terms; this repository adds no new licence grant for third-party material.
+Earlier releases remain in Git history; no claim is made to invent N70 or patch composition in general.
 
 ## 207 unit squares
 
