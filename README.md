@@ -68,34 +68,34 @@ Earlier releases remain in Git history; no claim is made to invent N70 or patch 
 
 ## 207 unit squares
 
-A complete exact rational construction with enclosing side
+A refined exact rational certificate for the existing PingYou Ltd construction:
 
 ```
-148809603730436756319360591381170501178639/10000000000000000000000000000000000000000
-= 14.8809603730436756319360591381170501178639
+3720240092889639048018577779/250000000000000000000000000
+= 14.880960371558556192074311116
 ```
 
-Thus **s(207) ≤ 14.880960373044**, rounded upward. This is a feasible upper bound; no global or local optimality is claimed.
+Thus **s(207) ≤ 14.880960371559**, rounded upward. This is a feasible upper bound, with no claim of local or global optimality.
 
-The public comparison checked on 11 October 2026 is [Nate Chaoweeraprasit's SQUISH result, submission #481](https://github.com/jlevy/squares/issues/481), with side 14.8855063088416776824135541958084… . The new side is smaller by approximately 0.00454593579800205 (0.03054%).
+The original submission was accepted as [T-147](https://github.com/jlevy/squares/blob/074ac28d4ceb9a1897303f936d794771cfc6a7bd/packing/frontier/n-207.md), at `14.8809603730436756319360591381170501178639`. This certificate reduces that exact side by **1.4851194398617480221170501178639E-9**. The refinement is tracked in the existing [issue #503](https://github.com/jlevy/squares/issues/503); acceptance of the original does not imply acceptance of the refinement.
 
-### Files and reproduction
+The inherited-frame prescription and whole-owner assembly are retained. This replay uses a new rational approximation to that frame and reduces the centre/container guard from `10000000001/10000000000` to `5000000000001/5000000000000`. It is not an angle search.
 
-- `01-squares-project.zip`: complete self-contained evidence and native-format package. Extract it, enter the extracted `01-squares-project` directory, and run `python3 VERIFY.py` (Python 3.10+ standard library; do not use `-O`).
-- `n207.cert.json`: exact rational centres and half-angle parameters, with full source/assembly provenance. Its geometry is identical to the certificate inside the ZIP.
-- `pingyou-n207-rational.yaml`: the same exact geometry in Squares Project Witness/v2 form (JSON syntax valid as YAML).
-- `n207-verified-comparison.pdf`: two-page comparison and construction explanation.
-- `n207.svg`: illustration from the exact witness.
-- `SHA256SUMS`: hashes of this release's files.
+### Files and verification
 
-The ZIP includes the N70 source, prior N207 certificate, deterministic exact reconstruction, three exact geometry implementations, two successful upstream Squares Project verifier receipts, format-conversion checks and replay instructions. All 207 unit squares, all 21,321 unordered pairs and every wall pass the exact checks. It also contains the prepared submission draft; historical wording in that draft about publication status predates this repository.
+- `01-squares-project.zip`: complete portable evidence and replay package. Extract, enter `01-squares-project`, and run `python3 VERIFY.py` (Python 3.10+ standard library; run without `-O`).
+- `n207.cert.json`: exact rational centre/half-angle triples. Internal nongeometric metadata is omitted; every coordinate string, ordering, count and side matches the reviewed witness.
+- `pingyou-n207-rational.yaml`: identical geometry in Squares Project Witness/v2 form.
+- `n207-verified-comparison.pdf` and `n207.svg`: refreshed comparison and diagram.
+- `n207-SHA256SUMS`: checksums of the five artifacts above.
 
-The direct JSON file has two source-path metadata strings made relative for portability. Its exact coordinates, orientations, side and all remaining values are unchanged from the reviewed original; `evidence/document-binding.json` inside the archive retains original/portable hashes. Source references in this file resolve within the extracted package's `evidence/` directory.
+All **207 unit squares, 828 wall conditions and 21,321 unordered pairs** pass three exact geometry implementations. The package verifies its hashes, recorded rational construction replay, lossless native conversion and deliberate invalid-input controls. Both unchanged Squares Project verifiers at `074ac28d4ceb9a1897303f936d794771cfc6a7bd` also pass; receipts, source, licenses and optional native replay instructions are included. These are implementation-level checks, not independent human audits.
+
+The replay begins with the explicit rational realization table and documented owner lineage. It does not rerun exploratory selection or a floating-point solve. The finite guard is included; the unguarded design value is not substituted for the certified bound.
 
 ### Construction and credit
 
-**PingYou Ltd**: new N207 assembly. **Ryan Xu**: the N70 source construction, announced in [#432](https://github.com/jlevy/squares/issues/432). **Evan Daniel**: exact source retention through [the pinned N70 certificate](https://github.com/evand/square-packing/blob/7dfca4e474e5822479f3da3fadf537fb2dbd0efc/search/regularize/lists/certs/n-070.cert.gz). **Nate Chaoweeraprasit (SQUISH)**: prior N207 comparison.
+**PingYou Ltd**: construction and refinement. **Ryan Xu**: underlying N70 construction, [#432](https://github.com/jlevy/squares/issues/432). **Evan Daniel**: [retained exact N70 source](https://github.com/evand/square-packing/blob/7dfca4e474e5822479f3da3fadf537fb2dbd0efc/search/regularize/lists/certs/n-070.cert.gz) and exact checking tools. **Nate Chaoweeraprasit (SQUISH)**: earlier N207 comparator, [#481](https://github.com/jlevy/squares/issues/481). Additional upstream software and schema credits and licenses are retained.
 
-Two differently placed source patches retain 60 and 69 whole unit squares; 7×6 and 6×6 grids add 42 and 36. Total: 207. A final factor 10000000001/10000000000 expands centres and container only, leaving small-square sides exactly one. The reported bound includes this guard. No claim is made to invent the N70 packing or patch composition in general.
+Earlier releases remain in Git history; no claim is made to invent N70 or patch composition in general.
 
-The package does not claim external maintainer acceptance or independent human review. Included upstream material retains its attribution and accompanying licence terms; this repository adds no new licence grant for third-party material.
