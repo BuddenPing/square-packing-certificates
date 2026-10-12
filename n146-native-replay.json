@@ -1,0 +1,50 @@
+{
+  "valid": true,
+  "source_repository": "https://github.com/jlevy/squares",
+  "source_commit": "074ac28d4ceb9a1897303f936d794771cfc6a7bd",
+  "upstream_source_hashes_verified": true,
+  "upstream_source_manifest_sha256": "9a2384cdc922f80b15843f581a860b37da3992ec7e0b1edbc7f6e6cc2712718b",
+  "python": "3.14.2",
+  "dependency_versions": {
+    "mpmath": "1.4.1",
+    "PyYAML": "6.0.3",
+    "jsonschema": "4.26.0",
+    "strif": "3.1.0"
+  },
+  "witness_sha256": "6e598c664e435cf89ee9c3429b203249afb6b649c9170d1af2bc41870b4d2b83",
+  "entrypoint": "sqpack.witness.load_witness followed by sqpack.witness.exact_verify (same functions as packing-witness verify)",
+  "native_replay": {
+    "operation": "verify",
+    "id": "W-pingyou-n146-rational",
+    "coordinate_provenance": "verified",
+    "method": "exact-algebraic",
+    "verification_passed": true,
+    "n": 146,
+    "side": "212706675227397903760245606872157807798841438063936454387903056635727898003963615684805096386145327886107738242216669359151930723994424404457105225445545795135/16903238770344720525176157542964020457292350107469085192369697156572885656221218224421809664610386039754206736232577088653206716252450318087651395365606969879",
+    "pairs_tested": 10585,
+    "minimum_containment_clearance": "0",
+    "minimum_best_pair_gap": "0",
+    "field_certificate": {
+      "field": "Q",
+      "preconditions": "degree-one rational field"
+    },
+    "failures": [],
+    "limitations": "Verifies witness feasibility and its upper bound, not global optimality."
+  },
+  "upstream_independent_checker": {
+    "verification_passed": true,
+    "coordinate_provenance": "verified",
+    "method": "exact-algebraic",
+    "field": "Q",
+    "n": 146,
+    "side": "212706675227397903760245606872157807798841438063936454387903056635727898003963615684805096386145327886107738242216669359151930723994424404457105225445545795135/16903238770344720525176157542964020457292350107469085192369697156572885656221218224421809664610386039754206736232577088653206716252450318087651395365606969879",
+    "pairs_tested": 10585,
+    "minimum_containment_clearance": "0",
+    "minimum_best_pair_gap": "0",
+    "failures": [],
+    "limitations": "Verifies witness feasibility and its upper bound, not optimality."
+  },
+  "exact_result_agreement": true,
+  "native_elapsed_seconds": 4.934361417006585,
+  "independent_elapsed_seconds": 3.0368385420006234
+}
