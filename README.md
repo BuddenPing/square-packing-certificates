@@ -2,16 +2,18 @@
 
 ## 302 unit squares
 
-A complete exact rational construction with enclosing side
+A refined exact rational certificate for the existing N302 construction, with enclosing side
 
 ```
-22337844230223278442299999/1250000000000000000000000
-= 17.8702753841786227538399992
+1787027538273375975382555057/100000000000000000000000000
+= 17.87027538273375975382555057
 ```
 
-Thus **s(302) ≤ 17.870275384179**, rounded upward. This is a feasible upper bound; no local or global optimality is claimed.
+Thus **s(302) ≤ 17.870275382734**, rounded upward. This is a feasible upper bound; no local or global optimality is claimed.
 
-The strongest prior public exact certificate located on 12 October 2026 is [Evan Daniel's regularization of Nate Chaoweeraprasit's SQUISH packing (T-146)](https://github.com/jlevy/squares/blob/562fdbdff1d98948f68b36b81b53f9c8165ffd08/packing/frontier/n-302.md), at 17.872029849081179973812429831968. The new side is smaller by **0.001754464902557219972430631968**, approximately **0.0098168%**. The comparison includes pending public reports and larger-count deletion bounds.
+This supersedes our original [N302 submission](https://github.com/jlevy/squares/issues/564), reducing its side by **0.00000000144486300001444863**. It refines the square-centre realization at the same cubic frame and uses the same guard multiplier. The original release remains available at commit `a0e6fb4185bdfff237e4a8106214119b9c122c7d`.
+
+The earlier public comparator is [Evan Daniel's regularization of Nate Chaoweeraprasit's SQUISH packing (T-146)](https://github.com/jlevy/squares/blob/562fdbdff1d98948f68b36b81b53f9c8165ffd08/packing/frontier/n-302.md), at 17.872029849081179973812429831968. The new side is smaller by **0.001754466347420219986879261968**, approximately **0.0098168%**. The comparison includes pending public reports and larger-count deletion bounds.
 
 ### Files and checking
 
@@ -21,7 +23,7 @@ The strongest prior public exact certificate located on 12 October 2026 is [Evan
 - `n302-verified-comparison.pdf` and `n302.svg`: comparison figure and packing diagram.
 - `n302-SHA256SUMS`: hashes of the five artifacts above.
 
-All **302 unit squares, 1,208 wall conditions and 45,451 pairs** pass. Three exact geometry checks accept the witness, and two unchanged native Squares Project verifiers pass at revision `074ac28d4ceb9a1897303f936d794771cfc6a7bd`. The package includes exact reconstruction of the physical-owner decoder, derived cubic frame, explicit rational centre table and recomputed finite guard. Replay does not repeat the exploratory owner selection or floating linear solve. These are implementation-level checks, not independent human audits or a proof of optimality.
+All **302 unit squares, 1,208 wall conditions and 45,451 pairs** pass. Three exact geometry checks accept the witness, and two unchanged native Squares Project verifiers pass at revision `074ac28d4ceb9a1897303f936d794771cfc6a7bd`. The package includes the physical-owner lineage, cubic frame, explicit rational centre table and recomputed finite guard. Replay checks the recorded finite realization; it does not repeat the exploratory selection or floating linear solve. The bank owners remain explicit but their centres are realized individually. These are implementation-level checks, not independent human audits or a proof of optimality.
 
 ### Construction and credit
 
