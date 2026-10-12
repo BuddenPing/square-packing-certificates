@@ -1,5 +1,27 @@
 # Square-packing certificates — PingYou Ltd
 
+## Contact refinements: 105 and 272 unit squares
+
+Registration requests: [N105 #568](https://github.com/jlevy/squares/issues/568) and [N272 #569](https://github.com/jlevy/squares/issues/569). Submitted 12 October 2026; awaiting maintainer review.
+
+| n | Certified upper bound, rounded upward | Comparison |
+|---:|---|---|
+| 105 | 10.7893037837481588309268366600396176597363 | More than 4.29007519545e-29 below the entire previous nominal-source rounding interval |
+| 272 | 16.9655864748376706357560070334220455696299 | Approximately 5.26079948951952e-16 below the previous published certificate |
+
+These are new metric realizations of inherited contact systems. N105 retains 435 feature incidences; N272 retains 1,564. Every physical unit square is included and exactly verified. Ordinary uniform contractions that merely remove old certificate padding are not claimed as new construction results.
+
+For N105, an inverse-dilation control reproduces the previous side and all 97 nonfree source rows. For N272, the final witness also improves a separately certified pre-stationarity contact projection by approximately 5.2607994895195187e-16. No unpublished N272 generator formula is assumed. Further comparison details and limitations are in the packages.
+
+- N105: [rational certificate](n105.cert.json), [native Witness/v2](pingyou-n105-rational.yaml), [complete package](n105-squares-project.zip), [method and replay](n105-README.txt), [checksums](n105-SHA256SUMS).
+- N272: [rational certificate](n272.cert.json), [native Witness/v2](pingyou-n272-rational.yaml), [complete package](n272-squares-project.zip), [method and replay](n272-README.txt), [checksums](n272-SHA256SUMS).
+
+Both packages pass separate exact separating-axis and rational polygon checks, negative controls, native-format identity checks, and both unchanged Squares Project verifiers at `074ac28d4ceb9a1897303f936d794771cfc6a7bd`. Extract either archive, enter its `n105-squares-project` or `n272-squares-project` directory, and run `python3 -B VERIFY.py` without `-O`. These results establish feasible upper bounds; no local or global optimality is claimed.
+
+**Credit:** PingYou Ltd, new contact refinements and submissions. N105 builds on Ryan Xu's layout and Francisco Couzo's refinement. N272 builds on Nate Chaoweeraprasit / SQUISH's arrangement, including its SQUISH s(240) and former Kingbird catalogue s(182) components. Evan Daniel supplied the contact solver. Original software and schema credits and licenses are retained.
+
+The authoritative release of these packages is pinned at `260aaf50230483654802790589c2dfce73237604`. Submission is distinct from maintainer acceptance.
+
 ## Exact certificate refinements: 146 and 261 unit squares
 
 Registration requests: [N146 #566](https://github.com/jlevy/squares/issues/566) and [N261 #567](https://github.com/jlevy/squares/issues/567), submitted 12 October 2026 and awaiting maintainer review.
