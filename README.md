@@ -24,21 +24,24 @@ The authoritative release of these packages is pinned at `260aaf5023048365480279
 
 ## Exact certificate refinements: 146 and 261 unit squares
 
-Registration requests: [N146 #566](https://github.com/jlevy/squares/issues/566) and [N261 #567](https://github.com/jlevy/squares/issues/567), submitted 12 October 2026 and awaiting maintainer review.
+Updated 13 October 2026. Registration requests [N146 #566](https://github.com/jlevy/squares/issues/566) and [N261 #567](https://github.com/jlevy/squares/issues/567) were submitted on 12 October 2026 and are awaiting maintainer review. The certificates below further strengthen those submissions.
 
-| n | Certified upper bound, rounded upward | Reduction from the preceding exact certificate |
+| n | Current certified upper bound, rounded upward | Reduction from our previous submitted exact witness |
 |---:|---:|---:|
-| 146 | **12.583782203950967** | approximately 8.01987214927426e-14 |
-| 261 | **16.678779875343112** | approximately 9.59713157359773e-14 |
+| 146 | **12.5837822039508342919134679370511513667729** | approximately 1.3171282204e-13 |
+| 261 | **16.6787798753429098149372205115301919485639** | approximately 2.0196044479e-13 |
 
-These bounds refine [Robert Barnett's certificates](https://github.com/RobertBarnettProjects/square-packing-research/tree/52cf1cc7ba006731ef76818267216c87bb63281e), registered in [Squares Project #505](https://github.com/jlevy/squares/issues/505). **Ryan Xu** supplied the original layouts, **Robert Barnett** the preceding refinements, and **PingYou Ltd** these exact certificate refinements. The prior N146 comparison also retains **Evan Daniel's** regularization credit.
+These are further refinements of existing records. **Ryan Xu** supplied the original layouts, **Robert Barnett** the preceding refinements, and **PingYou Ltd** these further refinements. **Evan Daniel** supplied the contact-solver source and earlier N146 regularization.
 
-Every unit square and orientation is preserved. A single exact contraction of the square centers reaches the first pair contact; exact cropping removes remaining wall clearance. The rational witnesses include permitted boundary contacts. No overlap tolerance is used. The bounds establish feasible packings, with no claim of local or global optimality.
+- **N146:** a high-precision coupled realization of the declared inherited square-corner, square-side and wall contacts produces a complete rational packing that is already valid; no common dilation repair is needed.
+- **N261:** the coupled-contact realization is followed by an exact common-centre/host separation repair. A final centre refinement retains every owner and every frame of that repaired intermediate witness within a complete physical support-inequality system, followed by exact rational repair and cropping. The reported bound includes both repairs.
+
+The exact rational witnesses are authoritative; all displayed bounds are rounded upward. Every physical unit square is included. Boundary contacts are permitted and no overlap tolerance is used. These are feasible upper bounds, with no claim of local or global optimality.
 
 - **N146:** [exact certificate](n146.cert.json), [native Witness/v2](pingyou-n146-rational.yaml), [portable verification package](n146-squares-project.zip), [method and provenance](n146-README.txt), [checksums](n146-SHA256SUMS).
 - **N261:** [exact certificate](n261.cert.json), [native Witness/v2](pingyou-n261-rational.yaml), [portable verification package](n261-squares-project.zip), [method and provenance](n261-README.txt), [checksums](n261-SHA256SUMS).
 
-Both pass exact construction replay, complete unit-square/wall/pair checks, and both unchanged Squares Project native verifiers at `074ac28d4ceb9a1897303f936d794771cfc6a7bd`. The public-frontier comparison was refreshed on 12 October 2026. Submission and maintainer acceptance are separate stages.
+Both pass exact unit-square, wall and all-pair checks, separate rational polygon-intersection checks, and both unchanged Squares Project native verifiers at `074ac28d4ceb9a1897303f936d794771cfc6a7bd`. This covers all 10,585 pairs for N146 and all 33,930 pairs for N261. Extract the relevant package, enter its top-level directory, and run `python3 VERIFY.py` with Python 3.10 or later, without `-O`; the package includes method, provenance and verification receipts. Maintainer acceptance remains pending.
 
 ## 302 unit squares
 
