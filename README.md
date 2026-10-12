@@ -1,5 +1,23 @@
 # Square-packing certificates — PingYou Ltd
 
+## Exact certificate refinements: 146 and 261 unit squares
+
+Registration requests: [N146 #566](https://github.com/jlevy/squares/issues/566) and [N261 #567](https://github.com/jlevy/squares/issues/567), submitted 12 October 2026 and awaiting maintainer review.
+
+| n | Certified upper bound, rounded upward | Reduction from the preceding exact certificate |
+|---:|---:|---:|
+| 146 | **12.583782203950967** | approximately 8.01987214927426e-14 |
+| 261 | **16.678779875343112** | approximately 9.59713157359773e-14 |
+
+These bounds refine [Robert Barnett's certificates](https://github.com/RobertBarnettProjects/square-packing-research/tree/52cf1cc7ba006731ef76818267216c87bb63281e), registered in [Squares Project #505](https://github.com/jlevy/squares/issues/505). **Ryan Xu** supplied the original layouts, **Robert Barnett** the preceding refinements, and **PingYou Ltd** these exact certificate refinements. The prior N146 comparison also retains **Evan Daniel's** regularization credit.
+
+Every unit square and orientation is preserved. A single exact contraction of the square centers reaches the first pair contact; exact cropping removes remaining wall clearance. The rational witnesses include permitted boundary contacts. No overlap tolerance is used. The bounds establish feasible packings, with no claim of local or global optimality.
+
+- **N146:** [exact certificate](n146.cert.json), [native Witness/v2](pingyou-n146-rational.yaml), [portable verification package](n146-squares-project.zip), [method and provenance](n146-README.txt), [checksums](n146-SHA256SUMS).
+- **N261:** [exact certificate](n261.cert.json), [native Witness/v2](pingyou-n261-rational.yaml), [portable verification package](n261-squares-project.zip), [method and provenance](n261-README.txt), [checksums](n261-SHA256SUMS).
+
+Both pass exact construction replay, complete unit-square/wall/pair checks, and both unchanged Squares Project native verifiers at `074ac28d4ceb9a1897303f936d794771cfc6a7bd`. The public-frontier comparison was refreshed on 12 October 2026. Submission and maintainer acceptance are separate stages.
+
 ## 302 unit squares
 
 A refined exact rational certificate for the existing N302 construction, with enclosing side
